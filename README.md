@@ -21,7 +21,7 @@ pip install requests pandas beautifulsoup4 nltk natasha regex scipy scikit-learn
 ```bash
 python main.py <запрос> [метод] [top_n]
 
-python main.py любовь
+python main.py "любовь"
 python main.py "рыжий человек" bm25_matrix 10
 ```
 
