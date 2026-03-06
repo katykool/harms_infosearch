@@ -1,2 +1,44 @@
-# harms_infosearch
-Infosearch hw1 (2026)
+# Поисковая система по текстам Хармса
+## Структура
+
+```
+data_loader.py      — загрузка и препроцессинг
+matrix_indexing.py  — 6 индексов (TF-IDF и BM25)
+search_engine.py    — обёртка над индексами, вывод результатов
+main.py             — точка входа
+```
+
+## Установка
+
+```bash
+pip install requests pandas beautifulsoup4 nltk natasha regex scipy scikit-learn rank-bm25
+```
+
+## Использование
+
+```bash
+python main.py <запрос> [метод] [top_n]
+
+python main.py любовь
+python main.py "рыжий человек" bm25_matrix 10
+```
+
+## Методы поиска
+
+| Метод | Описание |
+|---|---|
+| `tfidf_library` | TF-IDF через sklearn |
+| `tfidf_manual` | TF-IDF через словари |
+| `tfidf_matrix` | TF-IDF через матрицы |
+| `bm25_library` | BM25 через rank_bm25 |
+| `bm25_manual` | BM25 через словари |
+| `bm25_matrix` | BM25 через матрицы *(по умолчанию)* |
+
+## Кэш
+
+Повторные запуски используют кэш. Для пересборки:
+
+```bash
+python main.py любовь bm25_matrix 5
+# или удалить harms_texts_processed.csv вручную
+```
