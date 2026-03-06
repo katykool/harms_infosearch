@@ -36,3 +36,5 @@ python main.py "рыжий человек" bm25_matrix 10
 | `bm25_manual` | BM25 через словари |
 | `bm25_matrix` | BM25 через матрицы *(по умолчанию)* |
 
+<img width="1521" height="456" alt="image" src="https://github.com/user-attachments/assets/0ad9322a-6e95-4a59-b107-f45116acf0b5" />
+
