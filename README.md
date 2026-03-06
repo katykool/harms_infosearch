@@ -36,11 +36,3 @@ python main.py "рыжий человек" bm25_matrix 10
 | `bm25_manual` | BM25 через словари |
 | `bm25_matrix` | BM25 через матрицы *(по умолчанию)* |
 
-## Кэш
-
-Повторные запуски используют кэш. Для пересборки:
-
-```bash
-python main.py любовь bm25_matrix 5
-# или удалить harms_texts_processed.csv вручную
-```
